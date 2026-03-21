@@ -1,0 +1,104 @@
+/* Import Google Fonts — must come before @import "tailwindcss" per CSS spec */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Import Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Diner Theme — Custom design tokens via Tailwind v4 @theme */
+@theme {
+  /* Amber / Gold accent palette */
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+
+  /* Warm neutrals */
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+
+  /* Diner brand colors */
+  --color-diner-gold: #d97706;
+  --color-diner-gold-dark: #b45309;
+  --color-diner-gold-light: #fbbf24;
+  --color-diner-cream: #fffbeb;
+  --color-diner-bark: #92400e;
+
+  /* Typography */
+  --font-family-serif: "Playfair Display", Georgia, serif;
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Custom spacing / sizing if needed */
+  --radius-diner: 0.375rem;
+}
+
+/*
+ * Utility: .hover-lift
+ * Applies scale + shadow on hover only for devices with a fine pointer (mouse/trackpad).
+ * On touch-only devices the card remains flat — prevents sticky hover states on iOS/Android.
+ */
+@layer utilities {
+  .hover-lift {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 16px 0 rgb(0 0 0 / 0.10);
+      }
+    }
+  }
+}
+
+/* Base styles */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-family-sans);
+    background-color: #ffffff;
+    color: var(--color-stone-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-serif);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--color-stone-900);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,11 @@
+[web]
+  title = "Redwood Diner"
+  port = 8920
+  apiUrl = "/.redwood/functions"
+  includeEnvironmentVariables = []
+[api]
+  port = 8921
+[browser]
+  open = true
+[notifications]
+  versionUpdates = ["latest"]

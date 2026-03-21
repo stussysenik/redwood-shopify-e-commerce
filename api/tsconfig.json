@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "rootDirs": ["./src", "../.redwood/types/mirror/api/src"],
+    "paths": {
+      "src/*": ["./src/*", "../.redwood/types/mirror/api/src/*"]
+    },
+    "typeRoots": ["../node_modules/@types", "./node_modules/@types"],
+    "types": ["jest"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "../.redwood/types/includes/*",
+    "../.redwood/types/mirror/api/src"
+  ]
+}
