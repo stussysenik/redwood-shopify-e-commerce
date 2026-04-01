@@ -1,5 +1,8 @@
 # Redwood Diner
 
+![Demo](demo.gif)
+
+
 [![RedwoodJS](https://img.shields.io/badge/RedwoodJS-8.6-BF4722?logo=redwoodjs&logoColor=white)](https://redwoodjs.com)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
